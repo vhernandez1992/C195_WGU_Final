@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerScreenController">
+   <children>
+      <TableView fx:id="customerTable" layoutX="50.0" layoutY="49.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="customerIDCol" prefWidth="76.66665649414062" text="Customer ID" />
+          <TableColumn fx:id="nameCol" prefWidth="116.6666259765625" text="Name" />
+            <TableColumn fx:id="addressCol" prefWidth="120.66668701171875" text="Address" />
+            <TableColumn fx:id="postalCol" prefWidth="73.3333740234375" text="Postal Code" />
+            <TableColumn fx:id="firstLevelCol" prefWidth="112.0" text="State/Province" />
+            <TableColumn fx:id="phoneCol" prefWidth="100.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="294.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="updateButton" layoutX="198.0" layoutY="264.0" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
+      <Button fx:id="deleteButton" layoutX="450.0" layoutY="264.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+      <Pane layoutX="50.0" layoutY="309.0" prefHeight="227.0" prefWidth="600.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="227.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <Label layoutX="243.0" layoutY="14.0" text="Add Customer">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" layoutX="43.0" layoutY="51.0" prefHeight="25.0" prefWidth="184.0" promptText="Name" />
+            <TextField fx:id="addressField" layoutX="324.0" layoutY="51.0" prefHeight="25.0" prefWidth="217.0" promptText="Address" />
+            <TextField fx:id="postalCodeField" layoutX="324.0" layoutY="96.0" promptText="Postal Code" />
+            <TextField fx:id="phoneField" layoutX="43.0" layoutY="143.0" prefHeight="25.0" prefWidth="184.0" promptText="Phone Number" />
+            <ComboBox fx:id="countryComboBox" layoutX="324.0" layoutY="144.0" onAction="#countryComboSelected" prefWidth="150.0" promptText="Country" />
+            <ComboBox fx:id="firstLevelComboBox" layoutX="324.0" layoutY="186.0" prefWidth="150.0" promptText="State/Province" />
+            <Button fx:id="addButton" layoutX="522.0" layoutY="156.0" mnemonicParsing="false" onAction="#addButtonPressed" text="Add" />
+         </children>
+      </Pane>
+      <Button fx:id="backButton" layoutX="598.0" layoutY="553.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreenController">
+    <children>
+        <Button fx:id="loginButton" layoutX="290.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginClicked" text="Login">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Label fx:id="companyNameText" layoutX="195.0" layoutY="70.0" text="Global Consulting Corp,">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="userLocationText" layoutX="481.0" layoutY="423.0" text="User Location" />
+        <TextField fx:id="usernameField" layoutX="246.0" layoutY="142.0" promptText="Username" />
+      <PasswordField fx:id="passwordField" layoutX="246.0" layoutY="215.0" promptText="Password" />
+    </children>
+</AnchorPane>

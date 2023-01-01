@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <Label layoutX="410.0" layoutY="30.0" text="Reports">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="appointmentsTable" layoutX="50.0" layoutY="203.0" prefHeight="447.0" prefWidth="800.0">
+        <columns>
+            <TableColumn fx:id="appointmentIDCol" prefWidth="100.0" text="Appointment ID" />
+            <TableColumn fx:id="titleCol" prefWidth="100.0" text="Title" />
+          <TableColumn fx:id="typeCol" prefWidth="100.0" text="Type" />
+          <TableColumn fx:id="descriptionCol" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="startCol" prefWidth="125.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="125.0" text="End" />
+            <TableColumn fx:id="customerIDCol" prefWidth="85.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="reportComboBox" layoutX="338.0" layoutY="105.0" onAction="#reportComboBoxSelected" prefHeight="25.0" prefWidth="225.0" />
+      <RadioButton fx:id="typeReportRadio" layoutX="64.0" layoutY="88.0" mnemonicParsing="false" onAction="#typeRadioSelected" text="Type">
+         <toggleGroup>
+            <ToggleGroup fx:id="reportToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="monthReportRadio" layoutX="64.0" layoutY="139.0" mnemonicParsing="false" onAction="#monthRadioSelected" text="Month" toggleGroup="$reportToggle" />
+      <RadioButton fx:id="contactReportRadio" layoutX="210.0" layoutY="88.0" mnemonicParsing="false" onAction="#contactRadioSelected" text="Contact" toggleGroup="$reportToggle" />
+      <RadioButton fx:id="locationReportRadio" layoutX="210.0" layoutY="139.0" mnemonicParsing="false" onAction="#locationRadioSelected" text="Location" toggleGroup="$reportToggle" />
+      <Label fx:id="totalAppointmentsLabel" layoutX="656.0" layoutY="109.0" text="Total Appointments: " visible="false" />
+      <Button fx:id="backButton" layoutX="762.0" layoutY="661.0" mnemonicParsing="false" onAction="#backButtonSelected" text="Back" />
+      <Label layoutX="146.0" layoutY="57.0" text="Filter by:" />
+   </children>
+</AnchorPane>
